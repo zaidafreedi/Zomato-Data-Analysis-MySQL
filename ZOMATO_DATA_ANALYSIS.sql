@@ -47,8 +47,8 @@ WHERE CITY LIKE '%?%';
 
 -- UPDATING WITH REPLACE STRING FUNCTION
 UPDATE Zomato SET City  = (case when city like '%?%' then REPLACE(CITY,'?','i')
-												else REPLACE(city,'?','I') 
-                                                end);
+				else REPLACE(city,'?','I') 
+                                end);
 
 -- COUNTING TOTAL REST. IN EACH CITY OF PARTICULAR COUNTRY
 SELECT COUNTRY_NAME, CITY, COUNT(City) AS TOTAL_REST							      
